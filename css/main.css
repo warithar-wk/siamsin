@@ -2642,6 +2642,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-flex;
 }
 
+.testimonial-area h1 {
+  color: #fff;
+}
+
 .single-testimonial {
   background-color: #fff;
   padding: 25px 30px 12px 30px;
