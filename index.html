@@ -400,9 +400,17 @@
     <section class="testimonial-area relative section-gap">
       <div class="overlay overlay-bg"></div>
       <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="menu-content pb-60 col-lg-8">
+            <div class="title text-center">
+              <h1 class="mb-10">Facebook Post</h1>
+              <p>Who are in extremely love with eco friendly system.</p>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="active-testimonial">
-            <div class="single-testimonial item d-flex flex-row">
+            <!-- <div class="single-testimonial item d-flex flex-row">
               <div class="thumb">
                 <img class="img-fluid" src="img/user1.png" alt="" />
               </div>
@@ -428,6 +436,65 @@
                 <p>CEO at Google</p>
               </div>
             </div>
+            <div class="single-testimonial item d-flex flex-row">
+              <div class="thumb">
+                <img class="img-fluid" src="img/user1.png" alt="" />
+              </div>
+              <div class="desc">
+                <p>
+                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
+                  speaker, projector, hardware.
+                </p>
+                <h4 mt-30>Mark Alviro Wiens</h4>
+                <p>CEO at Google</p>
+              </div>
+            </div> -->
+            <div class="single-testimonial item d-flex flex-row blog-left">
+              <div class="single-blog">
+                <img class="mx-auto d-block img-fluid" src="img/b1.jpg" alt="" />
+                <div class="desc">
+                  <a href="#"><h5>We do Believe in Quality</h5></a>
+                  <p>
+                    inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
+                    standards.
+                  </p>
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-4 text-center">
+                      <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-4 text-center">
+                      <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="single-testimonial item d-flex flex-row blog-left">
+              <div class="single-blog">
+                <img class="mx-auto d-block img-fluid" src="img/b2.jpg" alt="" />
+                <div class="desc">
+                  <a href="#"><h5>We do Believe in Quality</h5></a>
+                  <p>
+                    inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
+                    standards.
+                  </p>
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-4 text-center">
+                      <i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-4 text-center">
+                      <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -435,7 +502,7 @@
     <!-- End testimonial Area -->
 
     <!-- Start latest-blog Area -->
-    <section class="latest-blog-area section-gap" id="blog">
+    <!-- <section class="latest-blog-area section-gap" id="blog">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="menu-content pb-60 col-lg-8">
@@ -512,7 +579,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End latest-blog Area -->
 
     <!-- Start brand Area -->
@@ -554,11 +621,20 @@
           <div class="row">
             <div class="col-lg-6 form-group">
               <input
+                name="subject"
+                placeholder="Enter your subject"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Enter your subject'"
+                class="common-input mb-20 form-control single-input"
+                required=""
+                type="text"
+              />
+              <input
                 name="name"
                 placeholder="Enter your name"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Enter your name'"
-                class="common-input mb-20 form-control"
+                class="common-input mb-20 form-control single-input"
                 required=""
                 type="text"
               />
@@ -569,24 +645,14 @@
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Enter email address'"
-                class="common-input mb-20 form-control"
+                class="common-input mb-20 form-control single-input"
                 required=""
                 type="email"
-              />
-
-              <input
-                name="subject"
-                placeholder="Enter your subject"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Enter your subject'"
-                class="common-input mb-20 form-control"
-                required=""
-                type="text"
               />
             </div>
             <div class="col-lg-6 form-group">
               <textarea
-                class="common-textarea mt-10 form-control"
+                class="common-textarea mt-10 form-control single-textarea"
                 name="message"
                 placeholder="Messege"
                 onfocus="this.placeholder = ''"
