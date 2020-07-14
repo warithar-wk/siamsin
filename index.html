@@ -403,58 +403,19 @@
         <div class="row d-flex justify-content-center">
           <div class="menu-content pb-60 col-lg-8">
             <div class="title text-center">
-              <h1 class="mb-10">Facebook Post</h1>
+              <h1 class="mb-10">Facebook Feed</h1>
               <p>Who are in extremely love with eco friendly system.</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="active-testimonial">
-            <!-- <div class="single-testimonial item d-flex flex-row">
-              <div class="thumb">
-                <img class="img-fluid" src="img/user1.png" alt="" />
-              </div>
-              <div class="desc">
-                <p>
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-                  speaker, projector, hardware.
-                </p>
-                <h4 mt-30>Mark Alviro Wiens</h4>
-                <p>CEO at Google</p>
-              </div>
-            </div>
-            <div class="single-testimonial item d-flex flex-row">
-              <div class="thumb">
-                <img class="img-fluid" src="img/user2.png" alt="" />
-              </div>
-              <div class="desc">
-                <p>
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-                  speaker, projector, hardware.
-                </p>
-                <h4 mt-30>Mark Alviro Wiens</h4>
-                <p>CEO at Google</p>
-              </div>
-            </div>
-            <div class="single-testimonial item d-flex flex-row">
-              <div class="thumb">
-                <img class="img-fluid" src="img/user1.png" alt="" />
-              </div>
-              <div class="desc">
-                <p>
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner,
-                  speaker, projector, hardware.
-                </p>
-                <h4 mt-30>Mark Alviro Wiens</h4>
-                <p>CEO at Google</p>
-              </div>
-            </div> -->
-            <div class="single-testimonial item d-flex flex-row blog-left">
+            <!-- <div class="single-testimonial item d-flex flex-row blog-left">
               <div class="single-blog">
                 <img class="mx-auto d-block img-fluid" src="img/b1.jpg" alt="" />
                 <div class="desc">
-                  <a href="#"><h5>We do Believe in Quality</h5></a>
-                  <p>
+                   <a href="#"><h5>We do Believe in Quality</h5></a>
+                  <p class="mt-10">
                     inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
                     standards.
                   </p>
@@ -476,8 +437,8 @@
               <div class="single-blog">
                 <img class="mx-auto d-block img-fluid" src="img/b2.jpg" alt="" />
                 <div class="desc">
-                  <a href="#"><h5>We do Believe in Quality</h5></a>
-                  <p>
+                   <a href="#"><h5>We do Believe in Quality</h5></a> 
+                  <p class="mt-10">
                     inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
                     standards.
                   </p>
@@ -494,7 +455,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -796,5 +757,72 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "779223819489887",
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: "v7.0",
+        });
+      };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+      FB.api(
+        "/1510314932520285",
+        "GET",
+
+        {
+          access_token:
+            "EAALEsy72El8BAMcyED4UQZCzVg3OMi7mODtY9leexZArixk8ISxyJywAOiZCxBAnkiZAQTtFdGMbI8GpaoMQpPRAJCGsPru1khCGENQ5ON3oVVbJKpnOQ7QiwE4o7jUz6VHDXLtZCYByRTO5YobOv2d9EpgEko1IZD",
+          fields: "feed.limit(10){picture,message,shares,full_picture,permalink_url}",
+        },
+        function (response) {
+          console.log(response.feed.data);
+
+          var feedData = response.feed.data;
+
+          feedData.map(function (x) {
+            $(".active-testimonial").append(
+              ` <a href="${x.permalink_url}" target="_blank"><div class="single-testimonial item d-flex flex-row blog-left">
+              <div class="single-blog">
+                <img class="mx-auto d-block img-fluid" src="${x.full_picture}" alt="" />
+                <div class="desc">
+                  <!-- <a href="#"><h5>We do Believe in Quality</h5></a> -->
+                  <p class="mt-30">
+                    ${x.message}
+                  </p>
+                  </div>
+                </div>
+              </div>
+            </div></a>`
+            );
+          });
+
+          $(".active-testimonial").owlCarousel({
+            items: 2,
+            loop: true,
+            margin: 30,
+            dots: true,
+            autoplay: false,
+            nav: true,
+            navText: ["<span class='lnr lnr-arrow-up'></span>", "<span class='lnr lnr-arrow-down'></span>"],
+            responsive: {
+              0: {
+                items: 1,
+              },
+              480: {
+                items: 1,
+              },
+              768: {
+                items: 2,
+              },
+            },
+          });
+        }
+      );
+    </script>
   </body>
 </html>

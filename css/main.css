@@ -2649,6 +2649,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-testimonial {
   background-color: #fff;
   padding: 25px 30px 12px 30px;
+  min-height: 379px;
 }
 
 .single-testimonial .thumb {
@@ -2668,6 +2669,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
+.single-testimonial .single-blog {
+  width: 495px;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-testimonial .single-blog img {
+  margin: auto;
+  min-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
 .single-blog .desc {
   padding: 0px 10px;
 }
