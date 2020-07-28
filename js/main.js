@@ -134,48 +134,6 @@ $(document).ready(function () {
     fixedContentPos: false,
   });
 
-  $(".active-project-carusel").owlCarousel({
-    items: 4,
-    loop: true,
-    margin: 50,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      1281: {
-        items: 4,
-      },
-    },
-  });
-
-  // $('.active-testimonial').owlCarousel({
-  //     items:2,
-  //     loop:true,
-  //     margin: 30,
-  //     dots: true,
-  //     autoplay:true,
-  //     nav:true,
-  //     navText: ["<span class='lnr lnr-arrow-up'></span>","<span class='lnr lnr-arrow-down'></span>"],
-  //     responsive: {
-  //         0: {
-  //             items: 1
-  //         },
-  //         480: {
-  //             items: 1,
-  //         },
-  //         768: {
-  //             items: 2,
-  //         }
-  //     }
-  // });
-
   //  Start Google map
 
   // When the window has finished loading create our google map below

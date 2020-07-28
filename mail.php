@@ -1,10 +1,13 @@
 <?php
-    $to = 'demo@spondonit.com';
+    $to = 'warithar.wk@outlook.co.th';
     $firstname = $_POST["fname"];
     $email= $_POST["email"];
     $text= $_POST["message"];
     $phone= $_POST["phone"];
     
+    echo $email;
+    echo $to;
+
 
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
@@ -21,11 +24,8 @@
         
     </table>';
 
-    if (@mail($to, $email, $message, $headers))
-    {
+    if (@mail($to, $email, $message, $headers)) {
         echo 'The message has been sent.';
-    }else{
+    } else {
         echo 'failed';
     }
-
-?>

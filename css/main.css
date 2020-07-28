@@ -51,7 +51,7 @@
 
 body {
   color: #777777;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Prompt", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.625em;
@@ -129,7 +129,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Prompt", sans-serif;
   color: #222222;
   line-height: 1.2em !important;
   margin-bottom: 0;
@@ -145,7 +145,7 @@ h6 {
 .h6 {
   margin-bottom: 0;
   margin-top: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Prompt", sans-serif;
   font-weight: 600;
   color: #222222;
 }
@@ -1937,9 +1937,14 @@ h6 {
   #logo {
     margin-left: 20px;
   }
+  .verified-mg-tb > div {
+    margin-left: 90px;
+    margin-bottom: 20px;
+  }
 }
 
-#header #logo h1 {
+#header #logo h1,
+#header #logo h1 a {
   font-size: 34px;
   margin: 0;
   padding: 0;
@@ -1948,9 +1953,10 @@ h6 {
   letter-spacing: 3px;
 }
 
-#header #logo h1 a,
-#header #logo h1 a:hover {
+#header #logo h1 a {
   color: #fff;
+}
+#header #logo h1 a:hover {
   padding-left: 10px;
   border-left: 4px solid #0d85e7;
 }
@@ -1958,11 +1964,12 @@ h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
+  max-height: 70px;
 }
 
 @media (max-width: 768px) {
   #header #logo h1 {
-    font-size: 28px;
+    font-size: 16px;
   }
   #header #logo img {
     max-height: 40px;
@@ -2332,7 +2339,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-content h1 {
   color: #fff;
-  font-size: 72px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1em;
   margin-top: 20px;
@@ -2427,7 +2434,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .projects-area .single-project {
-  height: 575px;
+  height: 350px;
   color: #222;
   position: relative;
   overflow: hidden;
@@ -2469,6 +2476,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 .projects-area .single-project .overlay-content h1 {
   color: #222;
   margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.projects-area .single-project .overlay-content p {
+  color: #fff;
 }
 
 @media (max-width: 1024px) {
@@ -2479,7 +2491,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 800px) {
   .projects-area .single-project .overlay-content h1 {
-    font-size: 36px;
+    font-size: 22px;
   }
 }
 
@@ -2544,10 +2556,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-fact h1 {
   font-weight: 700;
   font-size: 48px;
+  color: #fff;
 }
 
 .single-fact p {
   color: #222;
+  font-size: 16px;
 }
 
 @media (max-width: 800px) {
@@ -2582,7 +2596,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-service:hover p {
   color: #222;
 }
-
+.single-service:hover a {
+  color: #fff;
+}
 .single-service h4 {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2785,6 +2801,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 0px;
 }
 
+.card-contact a:hover {
+  color: #fff;
+}
+
 .footer-area {
   background-color: #222;
 }
@@ -2815,18 +2835,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area .footer-bottom {
+  padding-bottom: 40px;
+}
+
+.footer-area .footer-top {
   padding-top: 40px;
 }
 
-.footer-area .footer-bottom a {
+.footer-area .footer-top a {
   color: #0d85e7;
 }
 
-.footer-area .footer-bottom .footer-social {
+.footer-area .footer-top .footer-social {
   text-align: right;
 }
 
-.footer-area .footer-bottom .footer-social a {
+.footer-area .footer-top .footer-social a {
   background: #111111;
   margin: 2px;
   padding: 12px 16px;
@@ -2836,11 +2860,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease 0s;
 }
 
-.footer-area .footer-bottom .footer-social a:hover {
+.footer-area .footer-top .footer-social a:hover {
   background-color: #0d85e7;
 }
 
-.footer-area .footer-bottom .footer-social i {
+.footer-area .footer-top .footer-social i {
   color: #cccccc;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2849,13 +2873,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 991.98px) {
-  .footer-area .footer-bottom .footer-social {
+  .footer-area .footer-top .footer-social {
     text-align: left;
   }
 }
 
 @media (max-width: 768px) {
-  .footer-area .footer-bottom .footer-social {
+  .footer-area .footer-top .footer-social {
     margin-top: 20px;
   }
 }
@@ -2967,4 +2991,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .switch-wrap p {
   margin: 0;
+}
+
+.verified {
+  display: -webkit-inline-box;
+  height: 50px;
+}
+.verified img {
+  height: 50px;
+}
+.verified > img,
+.verified > a {
+  padding-right: inherit;
+}
+
+.verified-mg-tb {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
