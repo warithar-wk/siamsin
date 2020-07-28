@@ -25,6 +25,7 @@ function projectFinal(feedData) {
     loop: true,
     margin: 50,
     dots: true,
+    autoplay: true,
     responsive: {
       0: {
         items: 1,
@@ -66,7 +67,7 @@ function facebookFeed(feedData) {
     loop: true,
     margin: 30,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     nav: true,
     navText: ["<span class='lnr lnr-arrow-up'></span>", "<span class='lnr lnr-arrow-down'></span>"],
     responsive: {
