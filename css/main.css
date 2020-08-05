@@ -2813,11 +2813,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 0px;
 }
 
-.form-area .required span {
-  color: red;
-  font-size: 20px;
-}
-
 .card-contact a:hover {
   color: #fff;
 }
@@ -3039,7 +3034,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-width: 100%;
   max-height: 240px;
 }
-
 .map :hover {
   box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
   cursor: pointer;
