@@ -1,5 +1,5 @@
 <?php
-    $to = 'info@siamsincon.com';
+    $to = 'tanyanun@siamsincon.com';
     $firstname = $_POST["fname"];
     $subject = $_POST["subject"];
     $email= $_POST["email"];
@@ -13,7 +13,7 @@
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $message ='
 <div class="coupon" style="border: 5px dotted #0d85e7; width: 80%; border-radius: 15px; margin: 0 auto; max-width: 600px;">
-  <div class="container" style="padding: 2px 16px; background-color: #f9f9ff;">
+  <div class="container" style="padding: 2px 16px; background-color:#f9f9ff;">
     <h3>Siamsin Constraction Contact</h3>
   </div>
   <div class="container" style="padding: 2px 16px; background-color: white;">
