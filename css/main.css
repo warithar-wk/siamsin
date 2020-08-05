@@ -130,7 +130,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", "Prompt", sans-serif;
-  color: #222222;
+  color: #0d85e7;
   line-height: 1.2em !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -2071,9 +2071,12 @@ h6 {
   outline: none;
 }
 
-.nav-menu li:hover > a,
-.nav-menu > .menu-active > a {
+.nav-menu li:hover > a {
   color: #fff;
+}
+.nav-menu > .menu-active > a {
+  color: #0d85e7;
+  font-weight: 500;
 }
 
 .nav-menu > li {
@@ -2397,7 +2400,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feature-section {
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #e96f58;
   padding-bottom: 100px;
 }
 
@@ -2531,7 +2534,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: absolute;
   width: 60%;
   height: 1px;
-  background: #eeeeee;
+  background: #0d85e691;
   z-index: -1;
 }
 
@@ -2539,7 +2542,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: #eeeeee;
+  background: #0d85e691;
   margin: 0 50px;
 }
 
@@ -2550,7 +2553,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .projects-area .owl-dots .owl-dot.active {
-  background: #0d85e7;
+  background: #e96f58;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -2590,18 +2593,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  border: #e96f58 solid 1px;
 }
 
 .single-service:hover {
   box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
   cursor: pointer;
   background-color: #0d85e7;
+  border: rgba(0, 0, 0, 0) solid 1px;
 }
 
 .single-service:hover p {
   color: #222;
 }
-.single-service:hover a {
+.single-service:hover a,
+.single-service:hover h4 {
   color: #fff;
 }
 .single-service h4 {
@@ -2611,6 +2617,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease 0s;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #0d85e7;
 }
 
 .single-service h4 .lnr {
@@ -3031,4 +3038,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 .map iframe {
   max-width: 100%;
   max-height: 240px;
+}
+
+.map :hover {
+  box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
+  cursor: pointer;
+  background-color: #0d85e7;
+  border: rgba(0, 0, 0, 0) solid 1px;
 }
