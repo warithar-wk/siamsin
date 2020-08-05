@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
     <!-- meta character set -->
@@ -218,8 +218,8 @@
 
 
     <!-- Start testimonial Area -->
-    <section class="testimonial-area relative section-gap "  id="blog">
-      <div class="overlay overlay-bg" ></div>
+    <section class="testimonial-area relative section-gap" id="blog">
+      <div class="overlay overlay-bg"></div>
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="menu-content pb-60 col-lg-8">
@@ -460,6 +460,14 @@
     <script src="js/main.js"></script>
     <script src="js/facebook-feed.js"></script>
     <script>
+    
+    (function (d) {
+        var js, id = 'facebook-jssdk'; if (d.getElementById(id)) { return; }
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        d.getElementsByTagName('head')[0].appendChild(js);
+    }(document));
+    
       window.fbAsyncInit = function () {
         FB.init({
           appId: "779223819489887",
@@ -468,8 +476,8 @@
           version: "v7.0",
         });
       };
-
-      FB.api(
+$(window).load(function() {
+     FB.api(
         "/1510314932520285",
         "GET",
         {
@@ -492,6 +500,9 @@
           projectFinal(dataProject);
         }
       );
+    
+});
+     
     </script>
   </body>
 </html>
